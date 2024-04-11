@@ -1,0 +1,10 @@
+Ejercicio guia 
+Private void button_click(object sender, EventArgs e){
+string message="4/";
+byte[] msg= System.text.Encoding.ASCII.Getbytes(message);
+server.send(msg);
+byte[]msg2=new byte[80];
+server.Receive(msg2);
+mensaje=Encoding.ASCII.GetString(msg2).Split('\0')[0];
+MessageBox.Show(mensaje);
+}
